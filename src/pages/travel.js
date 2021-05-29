@@ -1,6 +1,5 @@
 import React from "react"
 
-import { graphql } from "gatsby"
 import { css } from "react"
 
 import Layout from "../components/layout"
@@ -12,9 +11,10 @@ import maidera_banner from "../../public/banners/madeira-banner.jpg"
 
 export default function Home({ data }) {
   return (
-    <Layout>
-      <h1>travels.</h1>
-      <b>{data.allFile.edges.length} travel reports</b>
+    <Layout headerText="travels">
+      <p>
+        <b>2 travel reports</b>
+      </p>
 
       {/* <ArticleLink
         to="../travels/travel_1"
@@ -51,17 +51,3 @@ export default function Home({ data }) {
     </Layout>
   )
 }
-
-export const query = graphql`
-query TravelPages {
-  allFile(filter: {extension: {regex: "/(js)|(md)|(mdx)/"}, relativeDirectory: {eq: "pages/travels"}}) {
-    edges {
-      node {
-        id
-        name
-        relativePath
-      }
-    }
-  }
-}
-`

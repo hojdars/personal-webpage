@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { css } from "react"
 
@@ -55,22 +55,11 @@ a:visited {
 }
 `
 
-const Title = () => {
-    const data = useStaticQuery(
-        graphql`
-            query {
-                site {
-                  siteMetadata {
-                    title
-                  }
-                }
-            }
-        `
-    )
+const Title = (props) => {
     return (
         <TitleDiv>
             <Link to="/">
-                <h2>{data.site.siteMetadata.title}</h2>
+                <h2>{props.headerText}</h2>
             </Link>
         </TitleDiv>
     )
@@ -81,10 +70,10 @@ display: flex;
 margin-top: 2vh;
 `
 
-const Header = () => {
+const Header = (props) => {
     return (
         <HeaderContainer>
-            <Title />
+            <Title headerText={props.headerText} />
             <Menu />
         </HeaderContainer>
     )
@@ -150,7 +139,7 @@ export function Body(props) {
 export default function Layout(props) {
     return (
         <Body width={"80"}>
-            <Header />
+            <Header headerText={props.headerText} />
             {props.children}
         </Body>
     )
