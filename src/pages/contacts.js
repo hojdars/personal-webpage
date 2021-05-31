@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <Layout headerText="about">
+    <Layout headerText="contacts.">
+      <h1>contacts.</h1>
       <p>
         Duis mattis neque ligula, at pretium eros fringilla ac. Donec ullamcorper venenatis nisi, at viverra arcu auctor quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas luctus id tellus a tempus.
         </p>

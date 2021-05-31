@@ -1,88 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
-import { css } from "react"
 
-const ListLinkItem = styled.div`
-flex-grow: 1;
-margin-right: 2rem;
-`
-
-const ListLink = props => {
-    return (
-        <ListLinkItem>
-            <Link to={props.to}>{props.children}</Link>
-        </ListLinkItem>
-    )
-}
-
-const MenuDiv = styled.div`
-list-style: none;
-display: flex;
-flex-direction: row;
-align-self: center;
-`
-
-const Menu = () => {
-    return (
-        <MenuDiv>
-            <ListLink to="/"><b>Home</b></ListLink>
-            <ListLink to="/about/"><b>About</b></ListLink>
-            <ListLink to="/travel/"><b>Travels</b></ListLink>
-        </MenuDiv>
-    )
-}
-
-const TitleDiv = styled.div`
-flex-grow: 1;
-
-h2 {
-    font-size: 1.75em;
-    margin: 0;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-a:hover {
-    color: black;
-}
-
-a:visited {
-    color: black;
-}
-`
-
-const Title = (props) => {
-    return (
-        <TitleDiv>
-            <Link to="/">
-                <h2>{props.headerText}</h2>
-            </Link>
-        </TitleDiv>
-    )
-}
-
-const HeaderContainer = styled.div`
-display: flex;
-margin-top: 2vh;
-`
-
-const Header = (props) => {
-    return (
-        <HeaderContainer>
-            <Title headerText={props.headerText} />
-            <Menu />
-        </HeaderContainer>
-    )
-}
+import Header from "./website_header"
 
 const LayoutDiv = styled.div`
 display: flex;
 flex-direction: column;
-max-width: 70vw;
+align-items: baseline;
+padding-top: 3em;
+max-width: 85ch;
 margin: auto auto;
 
 @media (max-width: 1080px) {
@@ -92,19 +18,19 @@ margin: auto auto;
 
 const BodyDiv = styled.div`
 h1 {
-    font-size: 2.5em;
+    font-size: 3.0em;
     line-height: calc(1ex / 0.42);
     margin-bottom: 0;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     line-height: calc(1ex / 0.42);
     margin-bottom: 0;
 }
 
 h3 {
-    font-size: 1.75em;
+    font-size: 2.0em;
     line-height: calc(1ex / 0.38);
     margin-bottom: 0;
 }
@@ -125,10 +51,7 @@ p {
 
 export function Body(props) {
     return (
-        <LayoutDiv
-            css={css`
-            width: ${props.width}ch;
-        `}>
+        <LayoutDiv>
             <BodyDiv>
                 {props.children}
             </BodyDiv>
@@ -138,10 +61,12 @@ export function Body(props) {
 
 export default function Layout(props) {
     return (
-        <Body width={"80"}>
+        <div>
             <Header headerText={props.headerText} />
-            {props.children}
-        </Body>
+            <Body>
+                {props.children}
+            </Body>
+        </div>
     )
 }
 
