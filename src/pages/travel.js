@@ -11,11 +11,7 @@ import maidera_banner from "../../public/banners/madeira-banner.jpg"
 
 export default function Home({ data }) {
   return (
-    <Layout headerText="travels">
-      <p>
-        <b>2 travel reports</b>
-      </p>
-
+    <Layout headerText="travels.">
       {/* <ArticleLink
         to="../travels/travel_1"
         title="Traveling light is great, here's what we take"
@@ -28,6 +24,13 @@ export default function Home({ data }) {
         title="Západy slunce Brno, březen"
         date="2021-03-19"
         excerpt="Jaro nás na jižní Moravě obrařilo několika malebnými západy slunce. Sice se nemůžeme dostat mimo Brno, ale to nevadí :-)"
+      />
+
+      <ArticleLink
+        to="../travels/travel_1"
+        title="Traveling light is great, here's what we take"
+        date="2021-03-17"
+        excerpt="Traveling is cool. Traveling light is more cool."
       />
 
       {/* Attersee 2019 */}

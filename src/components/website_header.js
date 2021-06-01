@@ -24,13 +24,14 @@ align-self: center;
 a {
     font-size: 1.3em;
     font-family: "Cooper Hewitt";
+    padding-bottom: 3px;
  }
 `
 
 const Menu = () => {
     return (
         <MenuDiv>
-            <ListLink to="/contacts/"><b>contacts</b></ListLink>
+            <ListLink to="/projects/"><b>projects</b></ListLink>
             <ListLink to="/travel/"><b>travels</b></ListLink>
             <ListLink to="/photography"><b>photography</b></ListLink>
         </MenuDiv>
@@ -75,7 +76,7 @@ const Title = (props) => {
     return (
         <TitleDiv>
             <Link to="/">
-                <h2>{data.site.siteMetadata.title}</h2>
+                <h2>{props.headerText}</h2>
             </Link>
         </TitleDiv>
     )
@@ -85,8 +86,19 @@ const HeaderContainer = styled.div`
 display: flex;
 margin-top: 3vh;
 padding-left: 3vw;
-padding-right: 3vw;
+margin-right: calc(3em - (100vw - 100%));
+min-height:45px;
 `
+
+export function HeaderNoTitle() {
+    return (
+        <HeaderContainer>
+            <TitleDiv>
+            </TitleDiv>
+            <Menu />
+        </HeaderContainer>
+    )
+}
 
 export default function Header(props) {
     return (

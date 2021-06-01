@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "personal-webpage",
+    title: "welcome",
   },
   plugins: ["gatsby-plugin-styled-components"],
 };

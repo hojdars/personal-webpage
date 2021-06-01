@@ -4,7 +4,7 @@ import PostHeader from "../../components/post_header"
 
 export default function BlogPost() {
   return (
-    <Layout>
+    <Layout headerText="travels.">
       <PostHeader
         title="Traveling light is great, here's what we take"
         date="2021-02-27"

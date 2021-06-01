@@ -1,7 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-import Header from "./website_header"
+import Header, { HeaderNoTitle } from "./website_header"
+
+const ScrollBarDiv = styled.div`
+margin-left: calc(100vw - 100%);
+margin-right: 0px;
+`
 
 const LayoutDiv = styled.div`
 display: flex;
@@ -60,13 +65,28 @@ export function Body(props) {
 }
 
 export default function Layout(props) {
-    return (
-        <div>
-            <Header headerText={props.headerText} />
-            <Body>
-                {props.children}
-            </Body>
-        </div>
-    )
+    if (props.headerText) {
+        return (
+            <div>
+                <Header headerText={props.headerText} />
+                <ScrollBarDiv>
+                    <Body>
+                        {props.children}
+                    </Body>
+                </ScrollBarDiv>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <HeaderNoTitle />
+                <ScrollBarDiv>
+                    <Body>
+                        {props.children}
+                    </Body>
+                </ScrollBarDiv>
+            </div>
+        )
+    }
 }
 
