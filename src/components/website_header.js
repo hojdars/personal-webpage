@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 const ListLinkItem = styled.div`
@@ -62,17 +62,6 @@ a:visited {
 `
 
 const Title = (props) => {
-    const data = useStaticQuery(
-        graphql`
-            query {
-                site {
-                  siteMetadata {
-                    title
-                  }
-                }
-            }
-        `
-    )
     return (
         <TitleDiv>
             <Link to="/">

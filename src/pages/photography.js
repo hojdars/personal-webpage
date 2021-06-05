@@ -1,15 +1,17 @@
 import React from "react"
 
-import Layout from "../components/web_gallery"
+import Layout, { ImageComponent } from "../components/web_gallery"
 
 export default function Home() {
   return (
     <Layout headerText="my photography.">
       <ul>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg"
-            alt="A Toyota Previa covered in graffiti" loading="lazy" />
-        </li>
+        <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg"
+          altText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt auctor condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg"
+          altText="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05465_dtkwef.jpg"
+          altText="Trees lit by green light during dusk" />
         <li>
           <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05621_zgtcco.jpg"
             alt="Interesting living room light through a window" loading="lazy" />
