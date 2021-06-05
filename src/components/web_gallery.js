@@ -115,7 +115,7 @@ width: 100vw;
 max-width: 700px;
 text-align: center;
 color: #ccc;
-padding: 0.5% 0;
+padding: 0.8% 0;
 max-height: 5%;
 `
 
