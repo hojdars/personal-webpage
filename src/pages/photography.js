@@ -8,9 +8,8 @@ export default function Home() {
       <ul>
         <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg"
           altText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt auctor condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-          <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg"
-          altText="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-          <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05465_dtkwef.jpg"
+
+        <ImageComponent imageUrl="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05465_dtkwef.jpg"
           altText="Trees lit by green light during dusk" />
         <li>
           <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05621_zgtcco.jpg"

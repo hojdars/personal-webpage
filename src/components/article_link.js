@@ -3,10 +3,34 @@ import { Link } from "gatsby"
 
 import styled from 'styled-components/macro'
 
-const Date = styled.div`
+const Date = styled.span`
 color:#888;
 line-height: calc(1ex / 0.32);
-margin: 0.25ex 0;
+margin-right: 10px;
+border: 2px solid #444;
+border-radius: 7px;
+background-color: #444;
+padding: 2px;
+`
+
+const TravelTag = styled.span`
+color:#888;
+line-height: calc(1ex / 0.32);
+margin-right: 10px;
+border: 2px solid #004500;
+border-radius: 7px;
+background-color: #004500;
+padding: 2px;
+`
+
+const TechTag = styled.span`
+color:#888;
+line-height: calc(1ex / 0.32);
+margin-right: 10px;
+border: 2px solid #853500;
+border-radius: 7px;
+background-color: #853500;
+padding: 2px;
 `
 
 const Excerpt = styled.div`
@@ -29,6 +53,12 @@ const ArticleLink = props => {
             <Date>
                 {props.date}
             </Date>
+            <TravelTag>
+                travel
+            </TravelTag>
+            <TechTag>
+                tech
+            </TechTag>
             <Excerpt>
                 {props.excerpt}
             </Excerpt>
