@@ -6,8 +6,9 @@ export default function BlogPost() {
   return (
     <Layout headerText="travels.">
       <PostHeader
-        title="Traveling light is great, here's what we take"
+        title='How we travel "light"'
         date="2021-02-27"
+        technologyTag
       />
 
       <p>

@@ -6,10 +6,11 @@ import { ImageContainer } from "../../components/photo_capsule"
 
 export default function BlogPost({ data }) {
   return (
-    <Layout>
+    <Layout headerText="travels.">
       <PostHeader
         title="Západy slunce Brno, březen"
         date="2021-03-19"
+        photographyTag
       />
 
       <p>

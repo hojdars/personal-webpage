@@ -3,35 +3,7 @@ import { Link } from "gatsby"
 
 import styled from 'styled-components/macro'
 
-const Date = styled.span`
-color:#888;
-line-height: calc(1ex / 0.32);
-margin-right: 10px;
-border: 2px solid #444;
-border-radius: 7px;
-background-color: #444;
-padding: 2px;
-`
-
-const TravelTag = styled.span`
-color:#888;
-line-height: calc(1ex / 0.32);
-margin-right: 10px;
-border: 2px solid #004500;
-border-radius: 7px;
-background-color: #004500;
-padding: 2px;
-`
-
-const TechTag = styled.span`
-color:#888;
-line-height: calc(1ex / 0.32);
-margin-right: 10px;
-border: 2px solid #853500;
-border-radius: 7px;
-background-color: #853500;
-padding: 2px;
-`
+import LinkInfo from "./article_info_header"
 
 const Excerpt = styled.div`
 font-size: 1em;
@@ -41,7 +13,7 @@ margin: 0.65ex 0;
 
 const LinkCapsule = styled.div`
 padding-bottom: 1rem;
-border-bottom: 1px solid #AAA;
+border-bottom: 1px solid #555;
 `
 
 const ArticleLink = props => {
@@ -50,19 +22,16 @@ const ArticleLink = props => {
             <Link to={props.to}>
                 <h3>{props.title}</h3>
             </Link>
-            <Date>
-                {props.date}
-            </Date>
-            <TravelTag>
-                travel
-            </TravelTag>
-            <TechTag>
-                tech
-            </TechTag>
+            <LinkInfo
+                travelTag={props.travelTag}
+                technologyTag={props.technologyTag}
+                photographyTag={props.photographyTag}
+                date={props.date}
+            />
             <Excerpt>
                 {props.excerpt}
             </Excerpt>
-        </LinkCapsule>
+        </LinkCapsule >
     )
 }
 

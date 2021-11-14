@@ -1,20 +1,23 @@
 import React from "react"
 import styled from 'styled-components/macro'
 
-const Date = styled.div`
-color:#888;
-line-height: calc(1ex / 0.32);
-margin: 0.25ex 0;
+import LinkInfo from "./article_info_header"
+
+const PostHeaderContainer = styled.div`
+margin-bottom: 40px;
 `
 
 const PostHeader = props => {
     return (
-        <div>
+        <PostHeaderContainer>
             <h1>{props.title}</h1>
-            <Date>
-                {props.date}
-            </Date>
-        </div>
+            <LinkInfo
+                travelTag={props.travelTag}
+                technologyTag={props.technologyTag}
+                photographyTag={props.photographyTag}
+                date={props.date}
+            />
+        </PostHeaderContainer>
     )
 }
 
